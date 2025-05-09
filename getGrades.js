@@ -24,5 +24,4 @@ async function fetchAndParse(url) {
     xhr.send();
 }
 
-// Example usage: Replace with the actual target URL
 fetchAndParse('https://gdrsd.schoolbrains.com/comm/Login.aspx');
