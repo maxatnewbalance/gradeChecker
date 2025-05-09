@@ -1,0 +1,11 @@
+{
+    "name": "Get Grades",
+    "version": "1.0.0",
+    "description": "Get kids grades from school brains",
+    "manifest_version": 3,
+    "author": "Max Hallsett",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Get Grades"
+    }
+}
