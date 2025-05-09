@@ -1,6 +1,7 @@
 'use strict';
 
 async function fetchAndParse(url) {
+    let result;
     try {
         const response = await fetch(url, { mode: 'no-cors' });
         if (!response.ok) {
@@ -20,9 +21,12 @@ async function fetchAndParse(url) {
         console.log("UID Input:", uidInput ? uidInput.outerHTML : "Not found");
         console.log("PWD Input:", pwdInput ? pwdInput.outerHTML : "Not found");
         console.log("Button:", button ? button.outerHTML : "Not found");
+        result = "found"
     } catch (error) {
         console.error("Error fetching or parsing the page:", error);
+        result = "error"
     }
+    document.getElementById('showGrades').innerHTML = result;
 }
 
 // Example usage: Replace with the actual target URL
