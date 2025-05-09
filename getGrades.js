@@ -2,7 +2,7 @@
 
 async function fetchAndParse(url) {
     try {
-        const response = await fetch(url, { mode: "cors" });
+        const response = await fetch(url, { mode: 'no-cors' });
         if (!response.ok) {
             throw new Error(`Failed to fetch page: ${response.status} ${response.statusText}`);
         }
